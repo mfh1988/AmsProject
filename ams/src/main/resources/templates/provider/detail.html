@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>detail</title>
+</head>
+<body>
+<h2 align="center">Detail de la formation</h2>
+<p th:utext="${an}">L'annee</p>
+<ul>
+    <li th:each="name : ${names}" th:text="${name}"></li>
+</ul>
+<table align="center" border="1">
+    <tr><th>Nom</th><th>Activity</th><th>Telephone</th></tr>
+
+    <tr th:each="provider : ${providers}">
+        <td th:text="${provider.nom}"></td>
+        <td th:text="${provider.nature}"></td>
+        <td th:text="${provider.mobile}"></td>
+    </tr>
+</table>
+<h3>OCA</h3>
+<h3>Spring boot</h3>
+<h3>Angular</h3>
+<h3>OCP</h3>
+<h3>DEVOPS</h3>
+<a href="welcome.html">La page welcome</a>
+</body>
+</html>
